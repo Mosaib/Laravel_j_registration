@@ -54,9 +54,15 @@
 
         <!-- Name -->
         <div class="col-span-6 sm:col-span-4">
-            <x-jet-label for="name" value="{{ __('Name') }}" />
-            <x-jet-input id="name" type="text" class="mt-1 block w-full" wire:model.defer="state.name" autocomplete="name" />
-            <x-jet-input-error for="name" class="mt-2" />
+            <x-jet-label for="f_name" value="{{ __('Prefix') }}" />
+            <x-jet-input id="f_name" type="text" class="mt-1 block w-full" wire:model.defer="state.p_name" autocomplete="f_name" />
+            <x-jet-input-error for="f_name" class="mt-2" />
+        </div>
+
+        <div class="col-span-6 sm:col-span-4">
+            <x-jet-label for="f_name" value="{{ __('Name') }}" />
+            <x-jet-input id="f_name" type="text" class="mt-1 block w-full" wire:model.defer="state.f_name" autocomplete="f_name" />
+            <x-jet-input-error for="f_name" class="mt-2" />
         </div>
 
         <!-- Email -->
