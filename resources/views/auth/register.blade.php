@@ -12,7 +12,7 @@
                 <x-jet-label for="name" value="{{ __('Prefix') }}" />
                 <div class="form-group">
                     <select  name="p_name" class="form-control" required autofocus autocomplete="prefix">
-                    <option selected disabled="">Choose...</option>
+                    <option value="N.A" selected disabled="">Choose...</option>
                     <option value="Rev.">Rev.</option>
                     <option value="Fr.">Fr.</option>
                     <option value="Br.">Br.</option>
@@ -66,6 +66,7 @@
                 <x-jet-label for="name" value="{{ __('Gender') }}" />
                 <div class="form-group">
                     <select  name="gender" class="form-control" required>
+                    <option value="N.A" selected disabled="">Choose...</option>
                     <option value="Male">Male</option>
                     <option value="Female">Female</option>
                     <option value="Others">Others</option>
@@ -75,6 +76,7 @@
                 <x-jet-label for="name" value="{{ __('Blood Group') }}" />
                 <div class="form-group">
                     <select  name="blood_group" class="form-control" required>
+                    <option value="N.A" selected disabled="">Choose...</option>
                     <option value="A+">A+</option>
                     <option value="A-">A-</option>
                     <option value="B+">B+</option>

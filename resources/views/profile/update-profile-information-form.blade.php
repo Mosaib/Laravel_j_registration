@@ -6,6 +6,7 @@
 
         <x-slot name="description">
             {{ __('Update your account\'s profile information and email address.') }}
+            
         </x-slot>
 
         <x-slot name="form">
@@ -54,10 +55,11 @@
             @endif
 
             <!-- Name -->
-            
-            <div class="form-group">
-                        <select  name="p_name" class="form-control" wire:model.defer="state.p_name" autocomplete="p_name">
-                        <option selected disabled="">Choose...</option>
+            <div class="col-span-6 sm:col-span-4">
+                <div class="form-group">
+                <x-jet-label for="f_name" value="{{ __('Prefix Name') }}" />
+                    <select  name="p_name" class="form-control" wire:model.defer="state.p_name" autocomplete="p_name">
+                        
                         <option value="Rev.">Rev.</option>
                         <option value="Fr.">Fr.</option>
                         <option value="Br.">Br.</option>
@@ -65,15 +67,26 @@
                         <option value="Mr.">Mr.</option>
                         <option value="Mrs.">Mrs.</option>
                         <option value="Miss.">Miss.</option>
-                        </select>
-                    </div>
-            
-            
+                    </select>
+                </div>
+            </div>
 
             <div class="col-span-6 sm:col-span-4">
-                <x-jet-label for="f_name" value="{{ __('Name') }}" />
+                <x-jet-label for="f_name" value="{{ __('First Name') }}" />
                 <x-jet-input id="f_name" type="text" class="mt-1 block w-full" wire:model.defer="state.f_name" autocomplete="f_name" />
                 <x-jet-input-error for="f_name" class="mt-2" />
+            </div>
+
+            <div class="col-span-6 sm:col-span-4">
+                <x-jet-label for="m_name" value="{{ __('Middle Name') }}" />
+                <x-jet-input id="m_name" type="text" class="mt-1 block w-full" wire:model.defer="state.m_name" autocomplete="m_name" />
+                <x-jet-input-error for="m_name" class="mt-2" />
+            </div>
+
+            <div class="col-span-6 sm:col-span-4">
+                <x-jet-label for="l_name" value="{{ __('Last Name') }}" />
+                <x-jet-input id="l_name" type="text" class="mt-1 block w-full" wire:model.defer="state.l_name" autocomplete="l_name" />
+                <x-jet-input-error for="l_name" class="mt-2" />
             </div>
 
             <!-- Email -->
@@ -83,7 +96,7 @@
                 <x-jet-input-error for="email" class="mt-2" />
             </div>
         </x-slot>
-
+        
         <x-slot name="actions">
             <x-jet-action-message class="mr-3" on="saved">
                 {{ __('Saved.') }}
